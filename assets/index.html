@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProjectFlow AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* For Modal Animation */
+        @keyframes modal-appear {
+          from { opacity: 0; transform: scale(0.95) translateY(-20px); }
+          to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-modal-appear {
+          animation: modal-appear 0.3s ease-out forwards;
+        }
+        body {
+          scrollbar-width: thin;
+          scrollbar-color: #4A5568 #1A202C; /* Adjust colors as needed for your theme */
+        }
+        body::-webkit-scrollbar {
+          width: 8px;
+        }
+        body::-webkit-scrollbar-track {
+          background: #1A202C; /* Dark track */
+        }
+        body::-webkit-scrollbar-thumb {
+          background-color: #4A5568; /* Muted thumb */
+          border-radius: 4px;
+          border: 2px solid #1A202C; /* Creates padding around thumb */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                // Revised dark theme palette
+                'brand-deep-dark': '#0D1117', // Deepest background (e.g., body)
+                'brand-dark-content': '#161B22', // Background for primary content containers/cards
+                'brand-dark-surface': '#22272E', // For interactive elements, inputs, slightly lighter surfaces
+
+                // Keeping original names for compatibility but mapping to new scheme
+                'brand-dark': '#0D1117',        // Was #121212
+                'brand-content': '#161B22',     // Was #1E1E1E (now card background)
+                'brand-surface': '#22272E',     // Was #2C2C2C (now for elements on cards/inputs)
+                
+                'brand-border': '#30363D',      // Subtler borders if absolutely needed (was #444444)
+                'brand-light-text': '#E6EDF3',  // Primary text (was #EAEAEA)
+                'brand-muted-text': '#8B949E',  // Secondary/muted text (was #A0A0A0)
+                
+                'accent-red': '#F85149',
+                'accent-orange': '#FFA500',
+
+                'gradient-a-start': '#7F00FF', 
+                'gradient-a-end': '#E100FF',   
+                
+                'gradient-b-start': '#007CF0', 
+                'gradient-b-end': '#00DFD8',   
+                
+                'gradient-c-start': '#FF4E50', 
+                'gradient-c-end': '#F9D423',
+
+                'gradient-sidebar-logo-start': '#FF8C00', // DarkOrange
+                'gradient-sidebar-logo-end': '#FF4500',   // OrangeRed
+              },
+              borderRadius: {
+                'xl': '1rem', // 16px
+                '2xl': '1.5rem', // 24px
+                '3xl': '2rem', // 32px
+              },
+              boxShadow: {
+                'soft': '0 4px 15px rgba(0, 0, 0, 0.2)',
+                'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', // Standard medium
+                'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)', // Standard large
+                'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.08)', // More pronounced for floating
+                '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)', // Even more pronounced
+                'inner-glow': 'inset 0 2px 4px 0 rgba(0,0,0,0.05)',
+                'glow-purple': '0 0 15px rgba(127, 0, 255, 0.5)', 
+                'glow-pink': '0 0 15px rgba(225, 0, 255, 0.4)', 
+              },
+              animation: {
+                'illuminate': 'illuminate_kf 0.15s ease-in-out',
+              },
+              keyframes: {
+                illuminate_kf: { 
+                  '0%, 100%': { filter: 'brightness(1)' },
+                  '50%': { filter: 'brightness(1.3)' }, 
+                },
+              }
+            }
+          }
+        }
+      </script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://apis.google.com/js/api.js" async defer></script>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-C9RW8xSu.js"></script>
+</head>
+<body class="bg-brand-deep-dark text-brand-light-text selection:bg-gradient-a-start selection:text-white">
+    <div id="root"></div>
+</body>
+</html>
